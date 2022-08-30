@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="clock.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="clockimg" id="imgg">
+        <img src="./images/clock.svg" alt="not found" />
+      </div>
+      <h1 id="time">00:00:00</h1>
+      <div class="set-alarm">
+        <select name="hours" id="hour">
+          <option value="" selected hidden>Hour</option>
+        </select>
+        <select name="minutes" id="minute">
+          <option value="" selected hidden>Minute</option>
+        </select>
+        <select name="ampm" id="ampm">
+          <option value="" selected hidden>AM/PM</option>
+        </select>
+      </div>
+      <button id="btn" onclick="setalarm()">Set Alarm</button>
+      <audio src="./audio/beep beep.mp3" id="ringtone"></audio>
+    </div>
+    <script src="clock.js"></script>
+  </body>
+</html>
