@@ -63,6 +63,9 @@ function displaytime() {
     document.getElementById("time").innerText = `${hour}:${minutes}:${seconds} ${ampm}`;
   } 
   else {
+         if (hour < 10) {
+      hour = `0${hour}`;
+    }
     ampm = "AM";
     document.getElementById("time").innerText = `${hour}:${minutes}:${seconds} ${ampm}`;
   }
