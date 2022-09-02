@@ -49,7 +49,7 @@ function displaytime() {
     ampm = "AM";
     document.getElementById("time").innerText = `${hour}:${minutes}:${seconds} ${ampm}`;
   }
-  if(hour==12)
+  if(hour == 12)
   {
     ampm ="PM";
     document.getElementById("time").innerText = `${hour}:${minutes}:${seconds} ${ampm}`;
@@ -62,7 +62,10 @@ function displaytime() {
     ampm = "PM";
     document.getElementById("time").innerText = `${hour}:${minutes}:${seconds} ${ampm}`;
   } 
-  else {
+  else if(hour < 12){
+    if (hour < 10) {
+      hour = `0${hour}`;
+    }
     ampm = "AM";
     document.getElementById("time").innerText = `${hour}:${minutes}:${seconds} ${ampm}`;
   }
